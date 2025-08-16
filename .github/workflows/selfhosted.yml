@@ -505,11 +505,7 @@ jobs:
         if [ "${{ github.event.inputs.CLEAN_BUILD }}" == "yes" ]; then
            export CLEAN="--clean"
         fi
-
-        if [[ -n "${{ secrets.PAID }}" ]]; then
-           echo "Paid Build... Tokens will be consumed."
            export PAID="--platform aosp-silver"
-        fi
 
         echo "Build is queued! Please wait for your build to start."
         echo "Check foss.crave.io Dashboard to see builds"
